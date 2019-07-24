@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Prototype</span>
+        Maintian tree preservation orders
+      </h1>
+
+      <form action="dashboard.html">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="one-half">
+            Email
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="one-third" name="one-third" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="one-half">
+            Password
+          </label>
+          <input class="govuk-input govuk-!-width-one-half" id="one-third" name="one-third" type="password">
+        </div>
+
+        <button type="submit" class="govuk-button">
+          Sign in
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+
+{% endblock %}

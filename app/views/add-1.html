@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="here-now-answer" method="post">
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Are you there now?
+                </h1>
+              </legend>
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="here-yes" name="location" type="radio" value="here-yes">
+                  <label class="govuk-label govuk-radios__label govuk-label--s" for="here-yes">
+                    Yes
+                  </label> <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+                    We can attempt to use GeoLocation to get your current location
+                  </span>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="here-no" name="location" type="radio" value="here-no">
+                  <label class="govuk-label govuk-radios__label govuk-label--s" for="here-no">
+                    No
+                  </label> <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+                    You will be able to search on a map by postcode or streetname
+                  </span>
+                </div>
+
+              </div>
+            </fieldset>
+          </div>
+
+        <button class="govuk-button" type="submit">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

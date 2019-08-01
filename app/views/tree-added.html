@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="add-1.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Tree added
+      </h1>
+      <div class="govuk-panel__body">
+        Authority reference<br><strong>122/AB</strong>
+      </div>
+    </div>
+
+    <h2 class="govuk-heading-m govuk-!-padding-top-5">What next?</h2>
+
+    <p class="govuk-body">
+      We've added the tree to your authoritys local land charges register
+      this will automatically be added to the Maintin LLC service.
+    </p>
+
+    <h3 class="govuk-heading-s">You can</h3>
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="add-1">Add another tree</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">View a tree record</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Update a tree record</a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}

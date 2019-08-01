@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="add-1.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Enter the source information</h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-hint" for="more-detail">
+        You could include information about the:
+      </label>
+      <ul class="govuk-list govuk-list--bullet govuk-hint">
+        <li>tree spicies</li>
+        <li>parent tree information</li>
+        <li>area</li>
+      </ul>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <a href="tree-added.html" type="submit" class="govuk-button" data-module="govuk-button">
+      Add tree
+    </a>
+
+  </div>
+</div>
+
+{% endblock %}

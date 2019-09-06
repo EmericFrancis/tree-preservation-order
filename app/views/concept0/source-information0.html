@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Tree information
+{% endblock %}
+
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="add-1.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Enter Information</h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Tree species
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published">Arborvitae</option>
+        <option value="updated" selected>Black Ash</option>
+        <option value="views">White Ash</option>
+        <option value="comments">Bigtooth Aspen</option>
+      </select>
+    </div>
+
+
+    <a href="tree-added.html" type="submit" class="govuk-button" data-module="govuk-button">
+      Add tree
+    </a>
+
+  </div>
+</div>
+
+{% endblock %}

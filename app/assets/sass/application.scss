@@ -13,7 +13,140 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-#map {
-width: 100%;
-padding-top: 66.66%;
+// #map {
+// width: 100%;
+// padding-top: 66.66%;
+// }
+
+.header-warning {
+  float: right;
+  background-color: #ffdd00;
+  max-width: 200px;
+  padding: 0px;
+  margin: 0px;
+}
+
+//full screen maps
+
+#full-screen-map-container {
+  position: relative;
+}
+
+.full-screen-map-wrapper {
+  display: table;
+  width: 100%;
+}
+
+.full-screen-map-sidebar {
+  z-index: 1;
+  width: 26.2%;
+  padding: 0 2vw;
+  background: white;
+  box-shadow: 5px 0px 3px -2px #DEE0E2;
+  overflow: auto;
+}
+
+#full-screen-map-sidebar, .two-thirds-map {
+  float: left;
+  position: relative;
+  height: calc(94vh - 106px);
+}
+
+.two-thirds-map {
+  width: 69%;
+}
+
+//search notice icon
+
+.notice img {
+  float: left;
+}
+
+.notice-content {
+  float: left;
+}
+//search bar
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  height: 38px;
+  max-width: 90vw;
+}
+
+.search-button {
+    height: 40px;
+    width: 38px;
+    cursor: pointer;
+    background: #0b0c0c url(../images/search-button.png) no-repeat 2px 50%;
+    border: 0;
+    border-radius: 0;
+}
+
+.search-button:focus {
+    outline: 3px solid #ffbf47;
+    outline-offset: 0;
+}
+
+.search-warning-inset-text {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0b0c0c;
+  padding: 16px 12.632px 12.632px 12.632px;
+  clear: both;
+  background-color: rgba(223, 48, 52, 0.1);
+  border-left: 10px solid #DF3034;
+}
+
+.address {
+  overflow-y: auto;
+  max-height: 250px;
+}
+
+//search Footer
+
+.search-footer {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-top: 1px solid #a1acb2;
+  color: #454a4c;
+  background: #dee0e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-footer-list li
+{
+   display:block;
+   float:left;
+   padding-right: 15px;
+}
+
+.search-footer-list a {
+  color: #454a4c;
+  font-size: 16px;
+}
+
+.search-footer-list a:visited {
+  color: #454a4c;
+}
+
+//branding customsation
+
+.custom-line {
+  border-bottom: 10px solid #f47738 !important;
+}
+
+.custom-tag {
+  background-color: #f47738 !important;
+}
+
+.custom-phase-banner {
+  border-bottom: 1px solid #f47738 !important;
 }

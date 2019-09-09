@@ -1,0 +1,159 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Tree information
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="charge-description.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Check your answers</h1>
+
+       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Category
+           </dt>
+           <dd class="govuk-summary-list__value">
+             Planning
+           </dd>
+           <dd class="govuk-summary-list__actions">
+           </dd>
+         </div>
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Planning category
+           </dt>
+           <dd class="govuk-summary-list__value">
+             Tree preservation order (TPO)
+           </dd>
+           <dd class="govuk-summary-list__actions">
+           </dd>
+         </div>
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Law
+           </dt>
+           <dd class="govuk-summary-list__value">
+             Town and Country Planning Act 1990 section 202
+           </dd>
+           <dd class="govuk-summary-list__actions">
+           </dd>
+         </div>
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Creation date
+           </dt>
+           <dd class="govuk-summary-list__value">
+             {{ data['creation-date-day'] }} {{ data['creation-date-month'] }} {{ data['creation-date-year'] }}
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="#">
+               Change<span class="govuk-visually-hidden"> contact details</span>
+             </a>
+           </dd>
+         </div>
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Extent
+           </dt>
+           <dd class="govuk-summary-list__value">
+             <img src="../public/images/13-okehampton-place.png" width="350px">
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="#">
+               Change<span class="govuk-visually-hidden"> previous application number</span>
+             </a>
+           </dd>
+         </div>
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Location
+           </dt>
+           <dd class="govuk-summary-list__value">
+             {{ data['address'] }}
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="#">
+               Change<span class="govuk-visually-hidden"> address</span>
+             </a>
+           </dd>
+         </div>
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Expiry date
+           </dt>
+           <dd class="govuk-summary-list__value">
+             {{ data['expire-date-day'] }} {{ data['expire-date-month'] }} {{ data['expire-date-year'] }}
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="#">
+               Change<span class="govuk-visually-hidden"> expiry date</span>
+             </a>
+           </dd>
+         </div>
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Source information
+           </dt>
+           <dd class="govuk-summary-list__value">
+             {{ data['source-information'] }}
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="#">
+               Change<span class="govuk-visually-hidden"> source information</span>
+             </a>
+           </dd>
+         </div>
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Authority reference
+           </dt>
+           <dd class="govuk-summary-list__value">
+             {{ data['authority-reference'] }}
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="#">
+               Change<span class="govuk-visually-hidden"> authority reference</span>
+             </a>
+           </dd>
+         </div>
+         <div class="govuk-summary-list__row">
+           <dt class="govuk-summary-list__key">
+             Description
+           </dt>
+           <dd class="govuk-summary-list__value">
+             {{ data['charge-description'] }}
+           </dd>
+           <dd class="govuk-summary-list__actions">
+             <a class="govuk-link" href="#">
+               Change<span class="govuk-visually-hidden"> charge description</span>
+             </a>
+           </dd>
+         </div>
+       </dl>
+
+       <h2 class="govuk-heading-m">Now add your local land charge</h2>
+
+       <p class="govuk-body">By adding this charge, you are confirming that this information is correct.</p>
+
+       <form action="charge-added" method="post" novalidate>
+
+         <input type="hidden" name="answers-checked" value="true">
+
+         <button class="govuk-button" data-module="govuk-button">
+           Add charge
+         </button>
+
+       </form>
+
+  </div>
+</div>
+
+{% endblock %}

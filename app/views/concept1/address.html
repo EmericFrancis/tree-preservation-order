@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  When was the charge created?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="map.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="expire">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="address-conditional-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Is there a singular address for this charge?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--conditional govuk-!-padding-top-5" data-module="radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="yes-address-conditional" name="address" type="radio" value="address" data-aria-controls="conditional-address-conditional">
+              <label class="govuk-label govuk-radios__label" for="yes-address-conditional">
+                Yes, there is one address
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-address-conditional">
+              <div class="govuk-form-group">
+                <h3 class="govuk-heading-m">Enter postcode</h3>
+                <div class="search-bar">
+                    <div class="govuk-form-group">
+                      <input class="govuk-input govuk-input--width-10" id="search" name="search" type="text">
+                    </div>
+                    <div class="search-bar-input">
+                      <button class="search-button">
+                        <span class="govuk-visually-hidden">Search</span>
+                      </button>
+                    </div>
+                  </div>
+              </div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="no-address-conditional-2" name="no-address" type="radio" value="address" data-aria-controls="conditional-address-conditional-2">
+              <label class="govuk-label govuk-radios__label" for="no-address-conditional-2">
+                No, there is multiple addresses or no address
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-address-conditional-2">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-!-font-weight-bold" for="contact-by-phone">
+                  Describe the location of the charge<br>
+                  <span class="govuk-hint">For example, 'land to the north of the bypass' or '20-26 High Street'.</span>
+                </label>
+                <textarea class="govuk-textarea govuk-!-margin-bottom-1" id="custom-area" name="address" rows="5" aria-describedby="address"></textarea>
+                <span class="govuk-hint">Answer must be shorter than 1000 characters (about 160 words)</span>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button" type="submit">
+        Continue
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}

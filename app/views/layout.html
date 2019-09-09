@@ -37,12 +37,40 @@
 {% block header %}
   {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: serviceName,
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+    <!-- <div class="header-warning">
+      <p class="govuk-body govuk-!-font-weight-bold">
+        CONCEPT BASED ON ASSUMPTIONS
+      </p>
+    </div> -->
+    <div class="govuk-header__container govuk-width-container custom-line">
+      <div class="govuk-header__logo">
+        <a href="#" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype">
+              <img src="/assets/images/govuk-logotype-crown.png" xlink:href="" class="govuk-header__logotype-crown-fallback-image" width="36" height="32"></img>
+            <span class="govuk-header__logotype-text">
+              GOV.UK
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="govuk-header__content">
+        <a href="#" class="govuk-header__link govuk-header__link--service-name">
+          Maintain LLC
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="govuk-phase-banner govuk-width-container custom-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag custom-tag">
+        CONCEPT
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a concept prototype based on assumptions and resarch from other services and users groups
+      </span>
+    </p>
+  </div>
 {% endblock %}
 
 {% if useAutoStoreData %}

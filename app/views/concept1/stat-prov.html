@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirm the law
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="dashboard.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="creation-date" method="post">
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                  Confirm the law
+                </h1>
+              </legend>
+              <p class="govuk-body govuk-!-margin-top-4 govuk-!-padding-bottom-2">
+                Which law is relevant to your <span class="govuk-!-font-weight-bold">Tree Presevation Order (TPO)</span>?
+              </p>
+
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="198" name="stat-prov" type="radio" value="Town and County Planning Act 1990 section 198">
+                  <label class="govuk-label govuk-radios__label" for="sign-in-1">
+                    Town and County Planning Act 1990 section 198
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="202" name="stat-prov" type="radio" value="Town and County Planning Act 1990 section 202">
+                  <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                    Town and County Planning Act 1990 section 202
+                  </label>
+              </div>
+            </div>
+            </fieldset>
+          </div>
+
+        <button class="govuk-button" type="submit">Continue</button>
+
+      </form>
+
+      <a class="govuk-link" href="#">Search for diffrent law</a>
+
+    </div>
+  </div>
+
+{% endblock %}

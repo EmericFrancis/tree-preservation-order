@@ -150,3 +150,9 @@ $govuk-global-styles: true;
 .custom-phase-banner {
   border-bottom: 1px solid #f47738 !important;
 }
+
+//find flow custon css
+
+.find-result:hover {
+  background-color: rgba(255, 221, 0, 0.4);
+}
